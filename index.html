@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hack-a-vator</title>
+<meta name="author" content="Oliver Wong">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+<link rel="stylesheet" href="lib/css/zenburn.css"> <!-- For syntax highlighting -->
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+	document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+</script>
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+<style type="text/css">
+	.reveal cite {
+		font-size: 50%
+	}
+	.reveal {
+		color: hsl(0,0%,20%);
+	}
+	.reveal blockquote strong {
+		color: hsl(0,0%,0%);
+	}
+</style>
+</head>
+<body><div class="reveal"><div class="slides">
+<section>
+	<h1>Hack-a-vator</h1>
+	<p>
+		<small>Oleksii Tsai (<a href="mailto:oleksiit@amazon.com">oleksiit@</a>), Oliver Wong (<a href="mailto:olivwong@amazon.com">olivwong@</a>), Tim Neumann (<a href="mailto:timmann@amazon.com">timmann@</a>) &mdash; Amazon 2015</small>
+	</p>
+</section>
+
+<section>
+	<h2>Why do people hate waiting for elevators?</h2>
+	<img class="stretch" width="708" height="495" src="media/business_people_waiting_for_elevator_42-17023043.jpg" />
+	<h3 class="fragment">(Hint: It’s not the length of the wait.)</h3>
+</section>
+
+<section>
+	<h1>S = P &mdash; E</h1>
+	<cite>David Maister, &ldquo;The Psychology of Waiting Lines&rdquo;, 1985</cite>
+</section>
+
+<section>
+	<h3>Queuing psychologists: three givens of human nature</h3>
+	<ol>
+		<li class="fragment" data-fragment-index="1"><span class="fragment highlight-red" data-fragment-index="4">We get bored when we wait in line.<span></li>
+		<li class="fragment" data-fragment-index="2">We really hate it when we expect a short wait and then get a long one.</li>
+		<li class="fragment" data-fragment-index="3">We really, really hate it when someone shows up after us but gets served before us.</li>
+	</ol>
+</section>
+
+<section>
+	<img class="stretch" width="600" height="411" src="media/Digital-Signage-Elevator-Lobby.jpg" />
+</section>
+
+<section>
+	<h2>Occupied time feels shorter than unoccupied time</h2>
+	<cite>David Maister, &ldquo;The Psychology of Waiting Lines&rdquo;, 1985</cite>
+</section>
+
+<section>
+	<h2>Supplement/Replace posters</h2>
+	<img class="stretch" width="600" height="627" src="media/Hack-a-vator full.png" />
+</section>
+
+<section>
+	<h2>Public Service Announcements</h2>
+	<img class="stretch" width="647" height="1000" src="media/evac-drill-flyer.jpg" />
+</section>
+
+<section>
+	<h2>Trailers</h2>
+	<img class="stretch" width="600" height="352" src="media/transparent-amazon.png" />
+</section>
+
+<section>
+	<h2>Polls/Simple Games</h2>
+	<h4>How do you feel about Brick-and-Mortar Amazon Stores?</h4>
+	<img class="stretch" width="256" height="256" src="media/Pie-chart-icon.png" />
+</section>
+
+<section>
+	<h3>Queuing psychologists: three givens of human nature</h3>
+	<ol>
+		<li>We get bored when we wait in line.</li>
+		<li><span style="color: red;">We really hate it when we expect a short wait and then get a long one.</span></li>
+		<li>We really, really hate it when someone shows up after us but gets served before us.</li>
+	</ol>
+</section>
+
+<section>
+	<blockquote>
+		&ldquo;Uncertainty magnifies the stress of waiting, while feedback in the form of expected wait times and explanations for delays improves the tenor of the experience.&rdquo;
+	</blockquote>
+	<cite>Alex Stone, &ldquo;Why Waiting Is Torture&rdquo;, New York Times 2012 Aug 18</cite>
+</section>
+
+<section>
+	<h2>Show TP95% Wait time</h2>
+	<h3 class="fragment">Parameterized by time of day, day of week</h3>
+</section>
+
+<section>
+	<p>How long do I have to wait for an elevator, given that it's Wednesday noon? &ldquo;3 minutes&rdquo;? Screw that, I'm taking the stairs.</p>
+	<img class="stretch" width="660" height="277" src="media/MAC01_ELEVATOR_SCIENCE98_wide.jpg" />
+</section>
+
+<section>
+	<h2>Self-healing/Self-optimizing system</h2>
+	<ul>
+		<li class="fragment">Busy elevators &#x21DB; High TP95 &#x21DB; Take stairs</li>
+		<li class="fragment">Idle elevators &#x21DB; Low TP95 &#x21DB; Take elevators</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Queuing psychologists: three givens of human nature</h3>
+	<ol>
+		<li>We get bored when we wait in line.</li>
+		<li>We really hate it when we expect a short wait and then get a long one.</li>
+		<li><span style="color: red;">We really, really hate it when someone shows up after us but gets served before us.</span></li>
+	</ol>
+</section>
+
+<section>
+	<h2>Anecdote</h2>
+	<img class="fragment" class="stretch" width="900" height="550" src="media/bigstock-Disgusted-Shock-Face-4327992.jpg" />
+</section>
+
+<section>
+	<h2>Don't show current floor</h2>
+	<ul>
+		<li>Algorithm is a black box.</li>
+		<li>Knowing the current floor doesn't tell you much.</li>
+		<li>All I care about is ETA.</li>
+		<li>Current floor is data that just infuriates you for no good reason.</li>
+	</ul>
+</section>
+
+<section>
+	<h2>UI Mockup</h2>
+	<iframe style="float: right;" width="560" height="315" src="https://www.youtube.com/embed/phyEY_mBea4" frameborder="0"></iframe>
+	<div style="padding: 1em;"><span style="border: solid 1px black; background: #AAF; padding: 1em;">TP95: 47 sec</span></div>
+	<div>
+		<img src="media/partly_cloudy.png" style="border: none;"/>
+		<div>57°F</div>
+	</div>
+</section>
+
+<section>
+	<h2>Need to move on with presentation</h2>
+</section>
+
+<section>
+	<h2>Further Incentivizing Stair-taking</h2>
+	<ul>
+		<li>Badge-in at door to stairs</li>
+		<li>Track scores</li>
+		<li>Leaderboard</li>
+		<li>Gift card/Phonetool icons</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Evaluation Summary</h2>
+	<h4>(For judge's convenience)</h4>
+</section>
+
+<section>
+	<h2>Cost of implementation</h2>
+	<h3>Low cost, high return</h3>
+	<ul>
+		<li>A couple of LCDs + Commodity PC per floor</li>
+		<li>Already gathering the data anyway</li>
+		<li>Can scale software (poster, trailers, games, etc.) as simple or complex as budget allows</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Ease of use</h2>
+	<h3>Instinctual</h3>
+	<ul>
+		<li>Watching trailers, so easy even I can do it</li>
+		<li>Anyone can understand "It'll take 3 minutes to get to the lobby if you take the elevator right now"</li>
+		<li>Most engineers at Amazon already familiar with TP95 terminology.</li>
+		<li>If you're not familiar, your guess-interpretation at seeing "3 minutes" on the screen is probably correct.</li>
+		<li>No training required, just have humans do what comes naturally</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Value Generation</h2>
+	<h3>Low cost, high return</h3>
+	<ul>
+		<li>Morale significantly improved</li>
+		<li>Actual productivity improved</li>
+		<li>Improved casual information dissemination</li>
+		<li>Improved poll participation rates, paves the way for prediction markets</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Uniqueness</h2>
+	<h3>???</h3>
+	<ul>
+		<li>Depends on other presentations</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Quality of Presentation</h2>
+	<h3>Judges are blown away</h3>
+	<ul>
+		<li>QED.</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Questions?</h2>
+</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				keyboard: true,
+				overview: true,
+				center: true,
+				slideNumber: true,
+
+				transition: 'linear',
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
